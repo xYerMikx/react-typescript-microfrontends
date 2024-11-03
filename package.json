@@ -7,8 +7,23 @@
     ]
   },
   "scripts": {
-    "start": "yarn workspace @mfe/host start & yarn workspace @mfe/cart start & yarn workspace @mfe/products start"
+    "start": "yarn workspace @mfe/host start & yarn workspace @mfe/cart start & yarn workspace @mfe/products start",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|jsx|ts|tsx|json|css)\"",
+    "format": "yarn prettier --write",
+    "prepare": "husky",
+    "check-format": "yarn prettier --list-different",
+    "lint": "yarn workspaces run lint"
   },
   "version": "1.0.0",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3"
+  },
+  "lint-staged": {
+    "**/*.+(js|jsx|ts|tsx|json|css)": [
+      "yarn format"
+    ]
+  }
 }
