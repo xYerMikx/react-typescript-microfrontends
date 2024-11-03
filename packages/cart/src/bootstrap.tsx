@@ -1,4 +1,5 @@
 import ReactDOM from "react-dom/client";
+
 import Cart from "./Cart";
 
 const rootElement = document.querySelector("#cart");

@@ -12,7 +12,8 @@
     "format": "yarn prettier --write",
     "prepare": "husky",
     "check-format": "yarn prettier --list-different",
-    "lint": "yarn workspaces run lint"
+    "lint": "yarn workspaces run lint",
+    "lint:fix": "yarn workspaces run lint:fix"
   },
   "version": "1.0.0",
   "license": "MIT",
