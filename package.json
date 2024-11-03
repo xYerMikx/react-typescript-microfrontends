@@ -1,0 +1,14 @@
+{
+  "name": "react-typescript-mf",
+  "private": "true",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "start": "yarn workspace @mfe/host start & yarn workspace @mfe/cart start & yarn workspace @mfe/products start"
+  },
+  "version": "1.0.0",
+  "license": "MIT"
+}
