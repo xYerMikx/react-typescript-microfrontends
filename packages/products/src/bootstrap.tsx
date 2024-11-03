@@ -1,4 +1,5 @@
 import ReactDOM from "react-dom/client";
+
 import Products from "./Products";
 
 const rootElement = document.querySelector("#products");
