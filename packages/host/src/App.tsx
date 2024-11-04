@@ -1,19 +1,18 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense } from 'react';
 
-const Cart = lazy(() => import("cart/Cart"));
-const Products = lazy(() => import("products/Products"));
+import { ErrorBoundary } from '@/components/ErrorBoundary/ErrorBoundary';
+import { Header } from '@/components/Header';
+
+const Products = lazy(() => import('products/Products'));
 
 const App = () => {
   return (
-    <div>
-      <h1>Host Application</h1>
-      <Suspense fallback={<>Some text...</>}>
-        <Cart />
-      </Suspense>
+    <ErrorBoundary>
+      <Header />
       <Suspense fallback={<>Some text...</>}>
         <Products />
       </Suspense>
-    </div>
+    </ErrorBoundary>
   );
 };
 
