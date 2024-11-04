@@ -66,7 +66,16 @@ const config: Configuration = {
         cart: 'cart@http://localhost:3001/cart.js',
         products: 'products@http://localhost:3002/products.js',
       },
-      shared: ['react', 'react-dom'],
+      shared: {
+        react: {
+          singleton: true,
+          requiredVersion: 'react',
+        },
+        'react-dom': {
+          singleton: true,
+          requiredVersion: 'react-dom',
+        },
+      },
     }),
     new HTMLWebpackPlugin({
       filename: 'index.html',

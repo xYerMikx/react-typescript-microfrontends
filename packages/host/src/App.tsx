@@ -1,17 +1,12 @@
-import { lazy, Suspense } from 'react';
+import { RouterProvider } from 'react-router-dom';
 
 import { ErrorBoundary } from '@/components/ErrorBoundary/ErrorBoundary';
-import { Header } from '@/components/Header';
-
-const Products = lazy(() => import('products/Products'));
+import { router } from '@/constants/routes';
 
 const App = () => {
   return (
     <ErrorBoundary>
-      <Header />
-      <Suspense fallback={<>Some text...</>}>
-        <Products />
-      </Suspense>
+      <RouterProvider router={router} />
     </ErrorBoundary>
   );
 };
