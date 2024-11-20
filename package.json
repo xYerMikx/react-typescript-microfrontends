@@ -13,11 +13,13 @@
     "prepare": "husky",
     "check-format": "yarn prettier --list-different",
     "lint": "yarn workspaces run lint",
-    "lint:fix": "yarn workspaces run lint:fix"
+    "lint:fix": "yarn workspaces run lint:fix",
+    "test:e2e:host": "yarn start & yarn workspace @mfe/host test:e2e:open"
   },
   "version": "1.0.0",
   "license": "MIT",
   "devDependencies": {
+    "cypress": "^13.16.0",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3"

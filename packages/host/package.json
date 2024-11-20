@@ -5,7 +5,10 @@
     "start": "webpack serve",
     "build": "webpack --mode production",
     "lint": "eslint .",
-    "lint:fix": "eslint 'src/**/*.{ts,tsx}' --fix"
+    "lint:fix": "eslint 'src/**/*.{ts,tsx}' --fix",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "test:e2e:open": "yarn start & yarn cypress:open"
   },
   "dependencies": {
     "react": "^18.2.0",
