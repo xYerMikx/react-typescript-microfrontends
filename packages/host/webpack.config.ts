@@ -23,6 +23,7 @@ const config: Configuration = {
       mixins: path.resolve(__dirname, '../shared/styling/scss/mixins.scss'),
     },
     extensions: ['.ts', '.tsx', '.js', '.scss'],
+    modules: ['src', 'node_modules'],
   },
   module: {
     rules: [
