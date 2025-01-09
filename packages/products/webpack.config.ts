@@ -16,7 +16,8 @@ const config: Configuration = {
     port: 3002,
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js'],
+    extensions: ['.ts', '.tsx', '.js', '.scss'],
+    modules: ['src', 'node_modules'],
   },
   module: {
     rules: [

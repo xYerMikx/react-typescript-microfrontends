@@ -1,0 +1,30 @@
+services:
+  host:
+    image: base-image
+    build:
+      context: .
+    container_name: host-app
+    working_dir: /app/packages/host
+    command: yarn workspace @mfe/host start
+    ports:
+      - 3000:3000
+
+  cart:
+    image: base-image
+    build:
+      context: .
+    container_name: cart-app
+    working_dir: /app/packages/cart
+    command: yarn workspace @mfe/cart start
+    ports:
+      - 3001:3001
+
+  products:
+    image: base-image
+    build:
+      context: .
+    container_name: products-app
+    working_dir: /app/packages/products
+    command: yarn workspace @mfe/products start
+    ports:
+      - 3002:3002
